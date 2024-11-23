@@ -1,9 +1,57 @@
-<header class="flex justify-between items-center py-5 w-[1120px] mx-auto">
-  <img class="rounded-full size-12" src="../../public/foto.png" alt="Jucaza foto">
-  <nav class="flex flex-row gap-x-10 opacity-90">
-    <a href="#top">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Projects</a>
-    <a href="#contacto">Contact</a>
-  </nav>
+<style>
+    #photo-container {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    .scrolled #photo-container {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+</style>
+<header
+    id="header"
+    class="z-10 fixed w-full flex justify-around bg-black bg-opacity-70 items-center py-5 mx-auto"
+>
+    <div id="photo-container" class="transition-all duration-300 ease-in-out">
+        <img
+            class="mx-5 rounded-full size-12"
+            src="https://avatars.githubusercontent.com/u/159819086?v=4"
+            alt="Jucaza foto"
+        />
+    </div>
+    <nav class="text-white flex flex-row gap-x-10 opacity-90">
+        <a
+            href="#top"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >Home</a
+        >
+        <a
+            href="#about"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >About</a
+        >
+        <a
+            href="#skills"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >Skills</a
+        >
+        <a
+            href="#projects"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >Projects</a
+        >
+        <a
+            href="#interests"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >Interests</a
+        >
+        <a
+            href="#contact"
+            class="hover:underline font-bold hover:text-orange-400 transition-colors"
+            >Contact</a
+        >
+    </nav>
 </header>
+

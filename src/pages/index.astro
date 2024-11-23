@@ -1,13 +1,112 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Interests from "../components/Interests.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, sou Juan <div class="flex flex-row justify-center items-center"><Badge >Disponible para trabajar</Badge></div></h1>
-			<h2 class="text-xl">Desarrollador Web. De Cordoba, España</h2>
-		</section>
-	</main>
+<script>
+    document.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        const topSection = document.getElementById("top");
+        if (topSection && header) {
+            if (window.scrollY > topSection.offsetHeight / 2) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        }
+    });
+</script>
+<style>
+    #main-photo {
+        opacity: 1;
+    }
+
+    .scrolled #main-photo {
+        opacity: 0;
+    }
+</style>
+
+<Layout title="Jucaza">
+    <main>
+        <!-- Top Section -->
+        <section
+            id="top"
+            class="relative w-full lg:w-[740px] mx-auto py-48 flex flex-row items-center"
+        >
+            <div
+                id="main-photo"
+                class="transition-all duration-300 ease-in-out"
+            >
+                <img
+                    src="https://avatars.githubusercontent.com/u/159819086?v=4"
+                    alt="Your Photo"
+                    class="scale-[.6] rounded-full mx-auto"
+                />
+            </div>
+            <div class="w-full mx-auto flex flex-col items-center">
+                <h1
+                    class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
+                >
+                    Hey, I am Juan. <div
+                        class="flex flex-row justify-center items-center"
+                    >
+                        <Badge>Ready for work</Badge>
+                    </div>
+                </h1>
+                <h2 class="text-xl text-white">
+                    Backend Developer from Cordoba, Spain
+                </h2>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <About />
+        <!-- Projects Section -->
+        <Skills />
+        <!-- Projects Section -->
+        <Projects />
+        <!-- Interests Section -->
+        <Interests />
+        <!-- Contact Section -->
+        <section
+            id="contact"
+            class="text-white w-full pt-48 lg:w-[740px] mx-auto flex flex-col items-center"
+        >
+            <h2 class="text-white text-5xl font-bold">Contact</h2>
+            <hr class="border-t-2 border-white w-full my-6" />
+            <ul
+                class="text-xl w-full text-white justify-items-center bg-gradient-to-b from-gray-500/30 via-gray-300/30 to-gray-50/30
+                rounded p-3"
+            >
+                <li>
+                    <strong class="mr-2">Email:</strong>
+                    <a
+                        href="mailto:juan01cz@gmail.com"
+                        class="text-blue-300 hover:underline"
+                        >juan01cz@gmail.com</a
+                    >
+                </li>
+                <li>
+                    <strong class="mr-2">LinkedIn:</strong>
+                    <a
+                        href="https://linkedin.com/in/juan-cano-zamora/"
+                        class="text-blue-300 hover:underline"
+                        >linkedin.com/in/juan-cano-zamora</a
+                    >
+                </li>
+                <li>
+                    <strong class="mr-2">GitHub:</strong>
+                    <a
+                        href="https://github.com/jucaza1"
+                        class="text-blue-300 hover:underline"
+                        >github.com/jucaza1</a
+                    >
+                </li>
+            </ul>
+            <br />
+        </section>
+    </main>
 </Layout>

@@ -1,0 +1,60 @@
+---
+import Card from "../components/Card.astro";
+
+let projects = [
+    {
+        href: "https://github.com/jucaza1/hotel-reserv",
+        href2: "https://github.com/Jucaza1/hotel-reserv/blob/main/docs/App_routes.md",
+        img:"hotel-endpoints.png",
+        title: "Hotel reservation API",
+        body: [
+            "Rest API written in Go, with fiber as http framework.",
+            "JWT authorization for admin and normal users.",
+            "MongoDB as database.",
+            "Integration testing for all the handlers with Go's standard library.",
+            "Central error handling.",
+            "Docker for ease of use and compatibility alongside with docker compose.",
+            "Makefile as command index for utilities.",
+        ],
+    },
+    {
+        href: "https://github.com/Jucaza1/link_shortener_ts",
+        href2: "https://github.com/Jucaza1/link_shortener_ts",
+        img:"link-shortener-endpoints.png",
+        title: "Link shortener API",
+        body: [
+            "Node.js application written in TypeScript using Express.",
+            "JWT authentication, for admin and normal users.",
+            "Storage and CRUD on SQLite database.",
+            "Automatic redirection endpoint for each link.",
+            "Jest for testing all the functionalities (E2E, Integration).",
+            "Zod for validation.",
+        ],
+    },
+];
+---
+
+<section
+    id="projects"
+    class="w-full pt-48 lg:w-[740px] mx-auto py-16 flex flex-col items-center"
+>
+    <h2 class="text-white text-5xl font-bold flex flex-row gap-x-4">
+        Projects
+    </h2>
+    <hr class="border-t-2 border-white w-full my-6" />
+    <ul class="w-full">
+        {
+            projects.map((p) => {
+                return (
+                    <Card
+                        href={p.href}
+                        href2={p.href2}
+                        img={p.img}
+                        title={p.title}
+                        body={p.body}
+                    />
+                );
+            })
+        }
+    </ul>
+</section>
