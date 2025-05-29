@@ -1,0 +1,50 @@
+---
+import Badge from "../components/Badge.astro"
+---
+
+        <section
+            id="top"
+            class="relative w-full lg:w-[740px] mx-auto py-48 flex flex-row items-center"
+        >
+            <div
+                id="main-photo"
+                class="transition-all duration-300 ease-in-out"
+            >
+                <img
+                    src="https://avatars.githubusercontent.com/u/159819086?v=4"
+                    alt="Your Photo"
+                    class="scale-[.6] rounded-full mx-auto"
+                />
+            </div>
+            <div class="w-full mx-auto flex flex-col items-center">
+                <h1
+                    class="text-white text-5xl font-bold flex flex-row gap-x-4 gap-y-3 pb-10 flex-wrap"
+                >
+                    Hey, <span>I am</span>
+                    <span>Juan.</span>
+                    <div class="flex flex-row justify-center items-center">
+                        <Badge>Ready for work</Badge>
+                    </div>
+                </h1>
+                <h2 class="text-xl text-white">
+                    Backend Developer from Madrid, Spain
+                </h2>
+                <div class="flex flex-row gap-7 mt-6 p-2">
+                    <a href="https://github.com/jucaza1"
+                        target="_blank" rel="noopener noreferrer"
+                        class="size-8 hover:scale-110 drop-shadow-[0_0_5px_white] hover:drop-shadow-[0_0_5px_orange] duration-300">
+                        <img src="/github-dark.svg" class="size-full"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-cano-zamora"
+                        target="_blank" rel="noopener noreferrer"
+                        class="size-8 hover:scale-110 drop-shadow-[0_0_5px_white] hover:drop-shadow-[0_0_5px_orange] duration-300">
+                        <img src="/linkedin.svg" class="size-full"/>
+                    </a>
+                    <a href="/Juan-Cano-Zamora.pdf"
+                        target="_blank" rel="noopener noreferrer"
+                        class="size-8 scale-[1.12] hover:scale-[1.21] drop-shadow-[0_0_5px_white] hover:drop-shadow-[0_0_5px_orange] duration-300">
+                        <img src="/cv-square.svg" class="size-full"/>
+                    </a>
+                </div>
+            </div>
+        </section>

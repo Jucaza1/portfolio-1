@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
 import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
 import Interests from "../components/Interests.astro";
 import Contact from "../components/Contact.astro";
+import Top from "../components/Top.astro"
 ---
 
 <script>
@@ -34,35 +34,7 @@ import Contact from "../components/Contact.astro";
 <Layout title="Jucaza">
     <main>
         <!-- Top Section -->
-        <section
-            id="top"
-            class="relative w-full lg:w-[740px] mx-auto py-48 flex flex-row items-center"
-        >
-            <div
-                id="main-photo"
-                class="transition-all duration-300 ease-in-out"
-            >
-                <img
-                    src="https://avatars.githubusercontent.com/u/159819086?v=4"
-                    alt="Your Photo"
-                    class="scale-[.6] rounded-full mx-auto"
-                />
-            </div>
-            <div class="w-full mx-auto flex flex-col items-center">
-                <h1
-                    class="text-white text-5xl font-bold flex flex-row gap-x-4 gap-y-3 pb-10 flex-wrap"
-                >
-                    Hey, <span>I am</span>
-                    <span>Juan.</span>
-                    <div class="flex flex-row justify-center items-center">
-                        <Badge>Ready for work</Badge>
-                    </div>
-                </h1>
-                <h2 class="text-xl text-white">
-                    Backend Developer from Madrid, Spain
-                </h2>
-            </div>
-        </section>
+        <Top />
         <!-- Projects Section -->
         <About />
         <!-- About Section -->
